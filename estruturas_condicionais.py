@@ -15,15 +15,18 @@ if media >= 7:
 else:
     print("Reprovado")
 #desafio2
-nome = input("digite seu nome")
+nome = input("digite o nome do aluno ")
 nota1 = float(input("digite a primeira nota: "))
 nota2 = float(input("digite a segunda nota: "))
 nota3 = float(input("digite a terceira nota: "))
 media = (nota1+nota2+nota3)/3
-if media >= 7:
+if media >= 7:    
     print(f"O aluno {nome} foi aprovado com média:{media}")
 
-elif(media<7 and media>3):
+if media > 7 or media<0:    
+    print(f"Digite uma nota válida")
+
+elif(media < 7 and media > 3):
     print(f"O aluno {nome} está em recuperação com média:{media}") 
 elif(media<=3):
     print(f"O aluno {nome} está em recuperação com média:{media}") 
